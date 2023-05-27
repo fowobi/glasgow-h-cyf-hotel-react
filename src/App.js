@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react'
 
-import Bookings from "./Bookings";
-import "./App.css";
+import Bookings from './components/Bookings'
+import './App.css'
 
 const App = () => {
   return (
@@ -9,7 +9,7 @@ const App = () => {
       <header className="App-header">CYF Hotel</header>
       <Bookings />
     </div>
-  );
-};
+  )
+}
 
-export default App;
+export default App
