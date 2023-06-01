@@ -2,8 +2,8 @@ import React from 'react'
 
 const SearchResult = () => {
   return (
-    <>
-      <table className="table">
+    <div className="table-container">
+      <table className="table table-bordered text-center">
         <thead className="thead-dark">
           <tr>
             <th scope="col">ID</th>
@@ -45,7 +45,7 @@ const SearchResult = () => {
           </tr>
         </tbody>
       </table>
-    </>
+    </div>
   )
 }
 

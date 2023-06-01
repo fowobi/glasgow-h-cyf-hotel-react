@@ -52,6 +52,18 @@ tr {
   text-align: center;
 }
 
+.table-container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 72%;
+}
+
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .card {
   width: 18rem;
 }
