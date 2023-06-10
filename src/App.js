@@ -14,9 +14,9 @@ const App = () => {
       <Heading />
       <TouristInfoCards />
       <Bookings />
-      <Restaurant />
+      <Restaurant/>
     </div>
-  )
+  );
 }
 
 export default App
