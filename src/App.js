@@ -5,6 +5,7 @@ import Bookings from "./components/Bookings";
 import "./App.css";
 import SearchResult from "./components/SearchResult";
 import Heading from "./components/Heading";
+import Restaurant from "./components/Restaurant";
 
 
 const App = () => {
@@ -13,6 +14,7 @@ const App = () => {
       <Heading />
       <TouristInfoCards />
       <Bookings />
+      <Restaurant />
     </div>
   )
 }
