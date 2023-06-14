@@ -6,6 +6,7 @@ import "./App.css";
 import SearchResult from "./components/SearchResult";
 import Heading from "./components/Heading";
 import Restaurant from "./components/Restaurant";
+import Footer from "./components/Footer";
 
 
 const App = () => {
@@ -15,6 +16,7 @@ const App = () => {
       <TouristInfoCards />
       <Bookings />
       <Restaurant/>
+      <Footer/>
     </div>
   );
 }
