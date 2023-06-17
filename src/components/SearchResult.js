@@ -1,24 +1,35 @@
-import React from "react";
-import moment from "moment";
+import React, { useState } from 'react'
+import moment from 'moment'
 
 const NumberOfNights = (entryDate, leavingDate) => {
-  const daysStayed = moment(leavingDate).diff(entryDate, `days`);
-  return daysStayed;
-};
+  const daysStayed = moment(leavingDate).diff(entryDate, 'days')
+  return daysStayed
+}
 
 const SearchResult = ({ results }) => {
-  const tableHeadings = Object.keys(results[0]);
+  const tableHeadings = Object.keys(results[0])
 
   const splitAndCapitalise = (str) => {
     return str
-      .replace(/([A-Z])/g, " $1")
+      .replace(/([A-Z])/g, ' $1')
       .trim()
-      .split(" ")
+      .split(' ')
       .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-      .join(" ");
-  };
+      .join(' ')
+  }
 
+  const [selectedRows, setSelectedRows] = useState([])
 
+  const handleClick = (index) => {
+    const newSelectedRows = [...selectedRows]
+    if (newSelectedRows.includes(index)) {
+      const rowIndex = newSelectedRows.indexOf(index)
+      newSelectedRows.splice(rowIndex, 1)
+    } else {
+      newSelectedRows.push(index)
+    }
+    setSelectedRows(newSelectedRows)
+  }
 
   return (
     <div className="table-container">
@@ -32,8 +43,16 @@ const SearchResult = ({ results }) => {
           </tr>
         </thead>
         <tbody>
-          {results.map((booking) => (
-            <tr key={booking.id}>
+          {results.map((booking, index) => (
+            <tr
+              key={booking.id}
+              onClick={() => handleClick(index)}
+              className={
+                selectedRows.includes(index)
+                  ? 'highlighted bg-secondary text-white'
+                  : ''
+              }
+            >
               {tableHeadings.map((key) => (
                 <td key={key}>{booking[key]}</td>
               ))}
@@ -45,7 +64,7 @@ const SearchResult = ({ results }) => {
         </tbody>
       </table>
     </div>
-  );
-};
+  )
+}
 
-export default SearchResult;
+export default SearchResult
