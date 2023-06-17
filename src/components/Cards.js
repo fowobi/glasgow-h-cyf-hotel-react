@@ -2,7 +2,7 @@ import React from "react";
 
 const Cards = () => {
   return (
-    <div className="Cards">
+    <div className="cards-container">
       <div className="card">
         <img
           src="https://images.unsplash.com/photo-1623401586941-7c26e4355151?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Z2xhc2dvd3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=1000&q=60"
