@@ -7,7 +7,8 @@ const NumberOfNights = (entryDate, leavingDate) => {
 }
 
 const SearchResult = ({ results }) => {
-  const tableHeadings = Object.keys(results[0])
+
+  const tableHeadings = Object.keys(results[0]);
 
   const splitAndCapitalise = (str) => {
     return str
