@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 const GlasgowCards = () => {
   return (
@@ -16,12 +16,15 @@ const GlasgowCards = () => {
           history.
         </p>
 
-        <a href="https://peoplemakeglasgow.com" className="btn btn-primary">
+        <a
+          href="https://peoplemakeglasgow.com"
+          target="_blank"
+          className="btn btn-primary">
           Visit Website
         </a>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default GlasgowCards
+export default GlasgowCards;
