@@ -5,19 +5,26 @@ import React, { useState, useEffect } from "react";
 const Bookings = () => {
   const [bookings, setBookings] = useState([]);
   const [error, setError] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    console.log("Page first renders");
+    // console.log("Page first renders");
 
-    fetch("https://cyf-react.glitch.me")
+    fetch("https://cyf-react.glitch.me/delayed")
       .then((response) => {
         if (!response.ok) {
           throw new Error("HTTP Error");
         }
         return response.json();
       })
-      .then((data) => setBookings(data))
-      .catch((error) => setError(error.message));
+      .then((data) => {
+        setBookings(data);
+        setIsLoading(false);
+      })
+      .catch((error) => {
+        setError(error.message);
+        setIsLoading(false);
+      });
   }, []);
 
   const search = (searchVal) => {
@@ -27,7 +34,9 @@ const Bookings = () => {
   return (
     <div className="App-content">
       <div className="container">
-        {error ? (
+        {isLoading ? (
+          <div className="loading-message">Loading...please wait</div>
+        ) : error ? (
           <div className="error-message">{error}</div>
         ) : (
           <>
@@ -41,4 +50,3 @@ const Bookings = () => {
 };
 
 export default Bookings;
-
