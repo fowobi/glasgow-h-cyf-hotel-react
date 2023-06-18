@@ -1,19 +1,17 @@
-import React,{ useState, useEffect } from "react";
 import Search from "./Search.js";
 import SearchResult from "./SearchResult.js";
-// import FakeBookings from "../data/fakeBookings";
+import React, { useState, useEffect } from "react";
 
 const Bookings = () => {
   const [bookings, setBookings] = useState([]);
 
   useEffect(() => {
-    console.log('Page first renders on the screen.');
+    console.log("Page first renders");
 
-    fetch('https://cyf-react.glitch.me')
+    fetch("https://cyf-react.glitch.me")
       .then((response) => response.json())
       .then((data) => setBookings(data));
-      
-       }, []);
+  }, []);
 
   const search = (searchVal) => {
     console.info("TO DO!", searchVal);
@@ -23,7 +21,7 @@ const Bookings = () => {
     <div className="App-content">
       <div className="container">
         <Search search={search} />
-        <SearchResult results={bookings}/>
+        <SearchResult results={bookings} />
       </div>
     </div>
   );
