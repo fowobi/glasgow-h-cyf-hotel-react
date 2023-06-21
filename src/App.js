@@ -1,13 +1,11 @@
-
 import React from "react";
-import TouristInfoCards from "./components/TouristInfoCards";
 import Bookings from "./components/Bookings";
 import "./App.css";
 import SearchResult from "./components/SearchResult";
 import Heading from "./components/Heading";
 import Restaurant from "./components/Restaurant";
 import Footer from "./components/Footer";
-
+import TouristInfoCards from "./components/TouristInfoCards";
 
 const App = () => {
   return (
@@ -15,10 +13,10 @@ const App = () => {
       <Heading />
       <TouristInfoCards />
       <Bookings />
-      <Restaurant/>
-      <Footer/>
+      <Restaurant />
+      <Footer />
     </div>
   );
-}
+};
 
-export default App
+export default App;

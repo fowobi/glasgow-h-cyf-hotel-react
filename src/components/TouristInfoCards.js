@@ -1,7 +1,7 @@
-// import React from 'react'
-// import GlasgowCards from './GlasgowCards-TouristInfoCards'
-// import ManchesterCards from './ManchesterCards-TouristInfoCards'
-// import LondonCards from './LondonCard-TouristInfoCards'
+import React from 'react'
+import GlasgowCards from './GlasgowCards-TouristInfoCards'
+import ManchesterCards from './ManchesterCards-TouristInfoCards'
+import LondonCards from './LondonCard-TouristInfoCards'
 
 // const TouristInfoCards = () => {
 //   return (
@@ -20,9 +20,12 @@ import React from "react";
 import Cards from "./Cards";
 
 const TouristInfoCards = () => {
+  const prop = cities;
   return (
     <div className="cards-container">
-      <Cards />
+      <GlasgowCards />
+      <ManchesterCards />
+      <LondonCards />
     </div>
   );
 };
