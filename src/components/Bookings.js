@@ -3,7 +3,6 @@ import SearchResult from "./SearchResult.js";
 import React, { useState, useEffect } from "react";
 
 const Bookings = () => {
-<<<<<<< Updated upstream
   const [bookings, setBookings] = useState([]);
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -27,10 +26,6 @@ const Bookings = () => {
         setIsLoading(false);
       });
   }, []);
-=======
-  const [bookings, setBookings] = useState(FakeBookings);
-  const [filteredBookings, setFilteredBookings] = useState([]);
->>>>>>> Stashed changes
 
   const search = (searchVal) => {
     const lowercaseSearchVal = searchVal.toLowerCase();
@@ -45,7 +40,6 @@ const Bookings = () => {
   return (
     <div className="App-content">
       <div className="container">
-<<<<<<< Updated upstream
         {isLoading ? (
           <div className="loading-message">Loading...please wait</div>
         ) : error ? (
@@ -56,12 +50,6 @@ const Bookings = () => {
             <SearchResult results={bookings} />
           </>
         )}
-=======
-        <Search search={search} />
-        <SearchResult
-          results={filteredBookings.length > 0 ? filteredBookings : bookings}
-        />
->>>>>>> Stashed changes
       </div>
     </div>
   );
