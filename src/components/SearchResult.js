@@ -70,7 +70,7 @@ const SearchResult = ({ results }) => {
               <td>
                 <button
                   role="button"
-                  className={'showProfileBtn btn btn-outline-primary'}
+                  className={'showProfileBtn btn btn-primary'}
                 >
                   Show profile
                 </button>
