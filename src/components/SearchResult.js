@@ -44,6 +44,7 @@ const SearchResult = ({ results }) => {
               <th key={heading}>{splitAndCapitalise(heading)}</th>
             ))}
             <th>Night</th>
+            <th></th>
           </tr>
         </thead>
         <tbody>
@@ -62,6 +63,10 @@ const SearchResult = ({ results }) => {
               ))}
               <td>
                 {NumberOfNights(booking.checkInDate, booking.checkOutDate)}
+              </td>
+
+              <td>
+                <button role="button" className={"showProfileBtn btn btn-outline-primary"}>Show profile</button>
               </td>
             </tr>
           ))}
