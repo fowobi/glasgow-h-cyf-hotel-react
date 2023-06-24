@@ -1,6 +1,6 @@
 function TouristInfoCards(prop) {
   return (
-    <div className="container">
+    <div className="CardContainer">
       {prop.result.map((card) => (
         <div className="card">
           <img src={card.imgSrc} alt={card.City} className="image" />
