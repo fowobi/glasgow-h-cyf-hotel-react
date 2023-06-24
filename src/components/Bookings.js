@@ -1,9 +1,12 @@
 import Search from "./Search.js";
 import SearchResult from "./SearchResult.js";
 import React, { useState, useEffect } from "react";
+import FakeBookings from "../data/fakeBookings";
+
+
 
 const Bookings = () => {
-  const [bookings, setBookings] = useState([]);
+  const [bookings, setBookings] = useState(FakeBookings);
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -26,7 +29,9 @@ const Bookings = () => {
         setIsLoading(false);
       });
   }, []);
+ 
 
+  
   const search = (searchVal) => {
     const lowercaseSearchVal = searchVal.toLowerCase();
     const filteredResults = FakeBookings.filter(
@@ -34,9 +39,9 @@ const Bookings = () => {
         booking.firstName.toLowerCase().includes(lowercaseSearchVal) ||
         booking.surname.toLowerCase().includes(lowercaseSearchVal)
     );
-    setFilteredBookings(filteredResults);
+    setBookings(filteredResults);
   };
-
+  
   return (
     <div className="App-content">
       <div className="container">
