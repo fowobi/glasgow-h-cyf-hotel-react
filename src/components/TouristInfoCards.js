@@ -1,16 +1,25 @@
-import React from 'react'
-import GlasgowCards from './GlasgowCards-TouristInfoCards'
-import ManchesterCards from './ManchesterCards-TouristInfoCards'
-import LondonCards from './LondonCard-TouristInfoCards'
-
-const TouristInfoCards = () => {
+function TouristInfoCards(prop) {
   return (
-    <div className="cards-container">
-      <GlasgowCards />
-      <ManchesterCards />
-      <LondonCards />
+    <div className="container">
+      {prop.result.map((card) => (
+        <div className="card">
+          <img src={card.imgSrc} alt={card.City} className="image" />
+          <div className="card-body">
+            <h1>{card.City}</h1>
+            <p>{card.description}</p>
+            <a
+              href={card.link}
+              target="_blank"
+              class="btn btn-primary">
+              More Information
+            </a>
+          </div>
+        </div>
+      ))}
     </div>
-  )
+  );
 }
 
-export default TouristInfoCards
+
+
+export default TouristInfoCards;

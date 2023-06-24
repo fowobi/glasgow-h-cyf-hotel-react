@@ -1,4 +1,3 @@
-
 import React from "react";
 import TouristInfoCards from "./components/TouristInfoCards";
 import Bookings from "./components/Bookings";
@@ -7,18 +6,18 @@ import SearchResult from "./components/SearchResult";
 import Heading from "./components/Heading";
 import Restaurant from "./components/Restaurant";
 import Footer from "./components/Footer";
-
+import DataOfCities from "./data/cities.json";
 
 const App = () => {
   return (
     <div>
       <Heading />
-      <TouristInfoCards />
+      <TouristInfoCards result={DataOfCities} />
       <Bookings />
-      <Restaurant/>
-      <Footer/>
+      <Restaurant />
+      <Footer />
     </div>
   );
-}
+};
 
-export default App
+export default App;
