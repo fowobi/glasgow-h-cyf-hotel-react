@@ -7,19 +7,14 @@ function TouristInfoCards(prop) {
           <div className="card-body">
             <h1>{card.City}</h1>
             <p>{card.description}</p>
-            <a
-              href={card.link}
-              target="_blank"
-              class="btn btn-primary">
+            <a href={card.link} target="_blank" class="btn btn-primary">
               More Information
             </a>
           </div>
         </div>
       ))}
     </div>
-  );
+  )
 }
 
-
-
-export default TouristInfoCards;
+export default TouristInfoCards
