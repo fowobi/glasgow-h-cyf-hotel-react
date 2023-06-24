@@ -1,11 +1,11 @@
-import React from "react";
-import Bookings from "./components/Bookings";
-import "./App.css";
-import SearchResult from "./components/SearchResult";
-import Heading from "./components/Heading";
-import Restaurant from "./components/Restaurant";
-import Footer from "./components/Footer";
-import DataOfCities from "./data/cities.json";
+import React from 'react'
+import Bookings from './components/Bookings'
+import './App.css'
+import Heading from './components/Heading'
+import Restaurant from './components/Restaurant'
+import Footer from './components/Footer'
+import DataOfCities from './data/cities.json'
+import TouristInfoCards from './components/TouristInfoCards'
 
 const App = () => {
   return (
@@ -16,7 +16,7 @@ const App = () => {
       <Restaurant />
       <Footer />
     </div>
-  );
-};
+  )
+}
 
-export default App;
+export default App
