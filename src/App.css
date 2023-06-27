@@ -1,12 +1,17 @@
+/* *{
+  outline: 1px red solid;
+} */
 .App {
   text-align: left;
 }
+
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 50px;
   margin-left: 10px;
   border-radius: 80px;
 }
+
 .App-header {
   background-color: #222;
   height: 80px;
@@ -17,13 +22,16 @@
   font-size: 1em;
   font-weight: bold;
 }
+
 .App-title {
   font-size: 1.5em;
 }
+
 .App-content {
   padding-top: 20px;
   font-size: large;
 }
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -35,12 +43,15 @@
 .search {
   padding: 5px 0 20px 0;
 }
+
 tr {
   color: #5b5757;
 }
+
 .results {
   padding-top: 15px;
 }
+
 .footer {
   height: 75px;
   text-align: center;
@@ -53,12 +64,14 @@ tr {
 li {
   list-style: none;
 }
+
 .CardContainer {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 44px;
   margin-top: 40px;
 }
+
 .card {
   width: 18rem;
   border: 3px black solid;
@@ -73,4 +86,43 @@ img {
 }
 a {
   text-align: center;
+}
+
+.restaurant {
+  border: 1px rgba(1, 1, 1, 0.2) solid;
+  margin: 3rem 6rem 6rem 7.5rem;
+}
+
+.orderList,
+h3 {
+  padding: 20px;
+  font-weight: bold;
+  font-size: larger;
+}
+h3 {
+  font-weight: bold;
+  font-size: 2.6rem;
+}
+
+#addButton {
+  margin: 0rem 0 1rem 19rem;
+}
+i {
+  margin-left: 1rem;
+  color: black;
+}
+.buttonList {
+  border: 1px rgba(0, 0, 0, 0.463) solid;
+  padding: 5px 0 0 20px;
+}
+
+.restaurant {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.advertisementLis {
+  border-left: 1px rgba(0, 0, 0, 0.463) solid;
+  padding-left: 20px;
 }

@@ -15,6 +15,7 @@ const App = () => {
       <Bookings />
       <Restaurant />
       <Footer />
+      
     </div>
   )
 }

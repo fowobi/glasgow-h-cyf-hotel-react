@@ -6,11 +6,12 @@ const Order = ({ orderType }) => {
     setOrders(orders + 1);
   };
   return (
-    <li>
-      {orderType}: {orders}{" "}
-      <button className="btn btn-primary" onClick={orderOne}>
+    <li className="buttonList">
+      {orderType}: {orders}
+      <button id="addButton" className="btn btn-primary" onClick={orderOne}>
         Add
       </button>
+      
     </li>
   );
 };
